@@ -1,0 +1,31 @@
+
+logging:
+  level:
+    root: INFO
+    org:
+      example:
+        cxfclient: DEBUG
+
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+#  metrics:
+#    export:
+#      prometheus:
+#        enabled: true
+#    tags:
+#      application: ${spring.application.name}
+
+spring:
+  profiles:
+    active: local
+
+
